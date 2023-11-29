@@ -1,0 +1,10 @@
+.footerStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  height: 80px;
+  font-size: 20px;
+  background: #6ebd44;
+  color: white;
+}

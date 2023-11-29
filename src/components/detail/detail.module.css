@@ -1,0 +1,68 @@
+.detailContainerStyle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.profileStyle {
+  padding: 40px 90px;
+  background-color: #006174;
+  border-radius: 20px;
+}
+
+.profileInfoStyle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settingsStyle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.settingsStyle p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.sectionStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+}
+
+.sectionStyle span {
+  color: white;
+  font-size: 18px;
+}
+
+.sectionStyle div {
+  padding: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.sectionStyle span {
+  width: 60px;
+}
+
+.purple {
+  background-color: #c493ff;
+}
+.orange {
+  background-color: #ffc75f;
+}
+.gray {
+  background-color: #fdf7ff;
+}
+
+.active {
+  outline: 2px solid black;
+}
