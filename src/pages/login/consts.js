@@ -6,6 +6,7 @@ export const loginData = {
     {
       id: 1,
       type: "email",
+      name: "email",
       placeholder: "Email",
       icon: emailIcon,
       altText: "email",
@@ -13,6 +14,7 @@ export const loginData = {
     {
       id: 2,
       type: "password",
+      name: "password",
       placeholder: "Password",
       icon: passwordIcon,
       altText: "password",

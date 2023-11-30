@@ -4,6 +4,21 @@
   gap: 20px;
   width: 80%;
   margin: 20px auto;
+  position: relative;
+}
+
+.detailContainerStyle button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  color: #6ebd44;
+  cursor: pointer;
 }
 
 .profileStyle {

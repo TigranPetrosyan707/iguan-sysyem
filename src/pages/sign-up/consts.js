@@ -7,6 +7,7 @@ export const signUpData = {
     {
       id: 1,
       type: "text",
+      name: "name",
       placeholder: "Name",
       icon: userIcon,
       altText: "user",
@@ -14,6 +15,7 @@ export const signUpData = {
     {
       id: 2,
       type: "email",
+      name: "email",
       placeholder: "Email",
       icon: emailIcon,
       altText: "email",
@@ -21,6 +23,7 @@ export const signUpData = {
     {
       id: 3,
       type: "password",
+      name: "password",
       placeholder: "Password",
       icon: passwordIcon,
       altText: "password",

@@ -9,8 +9,10 @@ const UserInfo = (data) => {
         <h4>{data.name}</h4> | <p>{data.email}</p>
       </div>
       <div className={styles.settingsStyle}>
-        <p>Click on checkbox to select colors</p>
-        <Settings data={settingsData} />
+        <p>
+          Click on checkbox to select colors and click on Approve changes button
+        </p>
+        <Settings data={settingsData} userID={data.id} />
       </div>
     </div>
   );

@@ -5,12 +5,18 @@ import styles from "./home.module.css";
 
 const Home = () => {
   const { currentUser } = useContext(AuthContext);
-
-  const isAdmin = currentUser.name === "Tigran";
+  const selectedColor = currentUser.Main;
+  const isAdmin = currentUser.isAdmin;
 
   return (
     <article className={styles.containerStyle}>
-      <h2>Welcome back, {currentUser.name}!</h2>
+      <h2
+        style={{
+          color: selectedColor ? selectedColor : "",
+        }}
+      >
+        Welcome back, {currentUser.name}!
+      </h2>
 
       {isAdmin && (
         <p>

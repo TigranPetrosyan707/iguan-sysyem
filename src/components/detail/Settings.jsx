@@ -1,7 +1,8 @@
 import { useState } from "react";
 import styles from "./detail.module.css";
+import axios from "axios";
 
-const Settings = ({ data }) => {
+const Settings = ({ data, userID }) => {
   const [selectedColors, setSelectedColors] = useState({
     Header: "",
     Main: "",
@@ -28,13 +29,24 @@ const Settings = ({ data }) => {
     }));
   };
 
+  const handleApproveChanges = async () => {
+    try {
+      const data = {
+        selectedColors,
+      };
+
+      await axios.put(`http://localhost:8800/api/users/${userID}`, data);
+    } catch (error) {
+      console.error("Error updating user:", error);
+    }
+  };
+
   return (
     <>
       {data.map((setting) => {
         return (
           <section key={setting.id} className={styles.sectionStyle}>
             <span>{setting.sectionName}</span>
-
             {isChecked[setting.sectionName] && (
               <>
                 <div
@@ -67,7 +79,6 @@ const Settings = ({ data }) => {
                 />
               </>
             )}
-
             <input
               type="checkbox"
               onChange={(e) => {
@@ -77,6 +88,7 @@ const Settings = ({ data }) => {
           </section>
         );
       })}
+      <button onClick={handleApproveChanges}>Approve changes</button>
     </>
   );
 };

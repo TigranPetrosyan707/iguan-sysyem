@@ -16,8 +16,7 @@ const ProtectedRoute = ({ children }) => {
 
 const AdminPanelRoute = ({ children }) => {
   const { currentUser } = useContext(AuthContext);
-  if (!currentUser || currentUser.name !== "Tigran")
-    return <Navigate to="/login" />;
+  if (!currentUser || !currentUser.isAdmin) return <Navigate to="/login" />;
   return children;
 };
 
